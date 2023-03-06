@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 function App() {
   const [reviewText, setReviewText] = useState(()=>"");
   const [lastUser] = useState(lastReviewer(reviews));
-  const [name, setName] = useState("name" in lastUser ? (lastUser.name as string) : "user")
-  const [isLoyal, setIsLoyal] = useState("loyaltyUser" in lastUser ? (lastUser.loyaltyUser as boolean) : false)
+  const [name] = useState("name" in lastUser ? (lastUser.name as string) : "user")
+  const [isLoyal] = useState("loyaltyUser" in lastUser ? (lastUser.loyaltyUser as boolean) : false)
  
   
   useEffect(() => {

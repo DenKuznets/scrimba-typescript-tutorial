@@ -1,4 +1,4 @@
-const reviewTotalDisplay = document.querySelector("#reviews");
+
 
 export function compareDate(user1: object, user2: object): object {
   let date1: string[];
@@ -33,19 +33,22 @@ export function lastReviewer(data: object[]): object {
   });
 }
 
-export function showReveiwTotal(num: number, reviewer: string, isLoyal: boolean) {
+export function showReveiwTotal(
+  num: number,
+  reviewer: string,
+  isLoyal: boolean
+) {
   let text = "";
   let loyaltyBadge = isLoyal ? "\u2606" : "";
 
-  if (reviewTotalDisplay !== null) {
-    text =
-      "total reviews " +
-      num.toString() +
-      " | Most recent review by " +
-      reviewer +
-      " " +
-      loyaltyBadge;
-  }
+  text =
+    "total reviews " +
+    num.toString() +
+    " | Most recent review by " +
+    reviewer +
+    " " +
+    loyaltyBadge;
+
   console.log(text);
   return text;
 }
