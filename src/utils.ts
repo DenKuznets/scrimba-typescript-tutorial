@@ -49,6 +49,6 @@ export function showReveiwTotal(
     " " +
     loyaltyBadge;
 
-  console.log(text);
+  // console.log(text);
   return text;
 }
